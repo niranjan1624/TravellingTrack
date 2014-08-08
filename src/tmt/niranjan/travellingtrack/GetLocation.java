@@ -240,6 +240,7 @@ import com.google.android.gms.location.ActivityRecognitionClient;
 		
 			String name=NirHelper.getName();
 			Name=name.toUpperCase(Locale.getDefault());
+			 date = new SimpleDateFormat("MMM dd, yyyy").format(new Date());
 			Time = new SimpleDateFormat("HH:mm:ss").format(new Date());
 			NirHelper.insertData(Activity, date, Time, LatLng,Address);	
 		
