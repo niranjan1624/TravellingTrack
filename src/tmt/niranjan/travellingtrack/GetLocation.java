@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -119,6 +120,7 @@ import com.google.android.gms.location.ActivityRecognitionClient;
 				Use.message(getApplicationContext(), "Person information is null");
 			}
         //   new LoadProfileImage(imgProfilePic).execute(photourl);
+			//Niranjan
 		
 		showLoc();
 		int resp =GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
@@ -538,5 +540,17 @@ import com.google.android.gms.location.ActivityRecognitionClient;
 		Use.message(this,"Disabled provider " );
 	}
 	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) 
+	{
+	    switch(keyCode)
+	    {
+	        case KeyEvent.KEYCODE_BACK:
 
+	            moveTaskToBack(true);
+
+	            return true;
+	    }
+	    return false;//hai
+	}
 }
