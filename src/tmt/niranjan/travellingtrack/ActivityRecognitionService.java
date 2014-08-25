@@ -62,5 +62,6 @@ public class ActivityRecognitionService extends IntentService	 {
 		else
 			return "Unknown";
 	}
+	//hai
 
 }
